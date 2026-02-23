@@ -1,0 +1,69 @@
+{
+  "id": "92d51e70-dbf5-4406-832b-9c57d6cdd448",
+  "title": "привет",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "привет",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\nпривет\n\n"
+        }
+      ],
+      "id": "9246279c-bc9b-4195-9ece-30c22436f49b",
+      "mentionables": []
+    },
+    {
+      "role": "assistant",
+      "content": "<think>\nOkay, the user just said \"привet.\" That's Russian for \"hello.\" They might be testing if I understand the language or looking to write something in Russian. Since they mentioned \"привет\" and then provided a markdown example without any specific request, it seems like they're showing how to structure the greeting in markdown.\n\nI should acknowledge their greeting and offer help with markdown editing as per the initial instructions. Looking at the first response, I noticed that I should format it with <smtcmp_block> tags and include filename and language attributes. But since there's no existing file mentioned, maybe they just want to know how to create a goodbye message in russian.\n\nSo, I'll start by greeting them back in Russian. Then, include an example of a markdown block for a goodbye message, using the correct syntax with the <smticmp_block> tags and attributes. I'll make sure the content is in Russian as per their request.\n\nI need to keep the answer concise and in markdown format, wrapping the example within the specified tags. Also, since there's no specific file provided, I'll leave the filename attribute blank or note that it's a sample.\n\nFinally, I'll provide a brief explanation that the added block is an example of a goodbye message formatted in markdown.\n</think>\n\nПривет! 😊  \n\n```markdown\n<smtcmp_block filename=\"example.md\" language=\"markdown\">\n## До свидания\nЭто сообщение будет отображаться под заголовком \"До свидания\".\n</smtcmp_block>\n```\n\nAdded an example of a goodbye message formatted in russian. The markdown block shows how it will appear under the \"Goodbye\" heading.",
+      "id": "106d4c3d-2246-4946-943f-4dac705a9ed7",
+      "metadata": {
+        "usage": {
+          "prompt_tokens": 389,
+          "completion_tokens": 345,
+          "total_tokens": 734
+        },
+        "model": {
+          "providerId": "ollama",
+          "providerType": "ollama",
+          "id": "deepseek-r1:8b",
+          "model": "deepseek-r1:8b"
+        }
+      }
+    }
+  ],
+  "createdAt": 1744983871604,
+  "updatedAt": 1744983958188,
+  "schemaVersion": 1
+}
