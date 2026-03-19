@@ -1,3 +1,5 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+body, section, article, h1, h2, h3, h4, h5, h6, p, a, .popover, .sidebar {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
