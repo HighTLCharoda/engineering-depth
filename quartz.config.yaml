@@ -16,8 +16,8 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
+      header: Consolas
+      body: Consolas
       code: IBM Plex Mono
     colors:
       lightMode:
@@ -41,15 +41,15 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
-  - source: github:quartz-community/created-modified-date
-    enabled: true
-    options:
-      defaultDateType: modified
-      priority:
-        - frontmatter
-        - git
-        - filesystem
-    order: 10
+  # - source: github:quartz-community/created-modified-date
+  #   enabled: true
+  #   options:
+  #     defaultDateType: modified
+  #     priority:
+  #       - frontmatter
+  #       - git
+  #       - filesystem
+  #   order: 10
   - source: github:quartz-community/syntax-highlighting
     enabled: true
     options:
@@ -140,8 +140,6 @@ plugins:
       enableRSS: true
   - source: github:quartz-community/favicon
     enabled: true
-  - source: github:quartz-community/og-image
-    enabled: true
   - source: github:quartz-community/cname
     enabled: true
   - source: github:quartz-community/canvas-page
@@ -221,12 +219,12 @@ plugins:
     layout:
       position: afterBody
       priority: 10
-  - source: github:quartz-community/footer
-    enabled: true
-    options:
-      links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+  # - source: github:quartz-community/footer
+  #   enabled: true
+  #   options:
+  #     links:
+  #       GitHub: https://github.com/jackyzha0/quartz
+  #       Discord Community: https://discord.gg/cRFFHYye7t
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
@@ -237,10 +235,10 @@ plugins:
       position: left
       priority: 25
       display: mobile-only
-  - source: github:quartz-community/bases-page
-    enabled: true
-    options: {}
-    order: 50
+  # - source: github:quartz-community/bases-page
+  #   enabled: true
+  #   options: {}
+  #   order: 50
   - source: github:quartz-community/note-properties
     enabled: true
     options:
@@ -258,25 +256,24 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
-  - source: github:Requiae/quartz-leaflet-bases-plugin
-    enabled: true
-    options:
-      enableCopyTool: false
+  # - source: github:Requiae/quartz-leaflet-bases-plugin
+  #   enabled: true
+  #   options:
+  #     enableCopyTool: false
   - source:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
     enabled: true
     options:
-      theme: its-theme
-      variation: ttrpg-dnd
-  - source: github:quartz-community/obsidian-plugin-excalidraw
-    enabled: true
-    options:
-      enableInteraction: true
-      darkMode: auto
-      exportPadding: 20
-    order: 50
+      theme: toms-theme
+  # - source: github:quartz-community/obsidian-plugin-excalidraw
+  #   enabled: true
+  #   options:
+  #     enableInteraction: true
+  #     darkMode: auto
+  #     exportPadding: 20
+  #   order: 50
 layout:
   groups:
     toolbar:
