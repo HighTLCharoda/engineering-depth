@@ -1,5 +1,0 @@
-# This directory is a Syncthing folder marker.
-# Do not delete.
-
-folderID: m4inp-l8kv5
-created: 2025-03-11T19:39:38+03:00
