@@ -14,6 +14,16 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
  
+plugins:
+  - source:
+      name: quartz-themes
+      repo: "https://github.com/saberzero1/quartz-themes.git"
+      subdir: plugin
+    enabled: true
+    options:
+      theme: tokyo-night
+      mode: both
+
 jobs:
   build:
     runs-on: ubuntu-latest
