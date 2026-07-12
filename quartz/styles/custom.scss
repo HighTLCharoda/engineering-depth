@@ -3,3 +3,97 @@
 a.nav-file-title {
     padding-left: .4rem;
 }
+
+// 1. Принудительно импортируем нужные шрифты из Google CDN
+
+
+// 2. Жёстко перебиваем внутренние переменные Quartz для всех режимов
+:root, [data-theme="light"], [data-theme="dark"] {
+  --headerFont: "Victor Mono", monospace;
+  --bodyFont: "Victor Mono", monospace;
+  --codeFont: "Victor Mono", monospace;
+}
+
+:root, [data-theme="light"], [data-theme="dark"] {
+        --zl-accent-hot-rgb: 235, 215, 150;
+    --zl-accent-rgb: 210, 185, 102;
+    --zl-button-ink: #15130c;
+    --zl-flicker-a: 0.992;
+    --zl-flicker-b: 1;
+    --zl-font-body: "Consolas", "Cascadia Mono", monospace;
+    --zl-font-mono: "Consolas", "Cascadia Mono", monospace;
+    --zl-font-ui: "Consolas", "Cascadia Mono", monospace;
+    --zl-panel-veil: rgba(11, 10, 7, 0.94);
+    --zl-panel-veil-alt: rgba(16, 14, 9, 0.97);
+    --zl-phosphor-accent: #d2b966;
+    --zl-phosphor-accent-hover: #ebd796;
+    --zl-phosphor-faint: #786638;
+    --zl-phosphor-main: #f3dc8c;
+    --zl-phosphor-muted: #c0aa62;
+    --zl-phosphor-rgb: 243, 220, 140;
+    --zl-phosphor-wash: rgba(210, 185, 102, 0.034);
+    --zl-radius-l: 8px;
+    --zl-radius-m: 4px;
+    --zl-radius-s: 2px;
+    --zl-rgb-cyan: rgba(96, 216, 255, 0.065);
+    --zl-rgb-red: rgba(255, 96, 64, 0.075);
+    --zl-scanline-bright: rgba(243, 220, 140, 0.018);
+    --zl-scanline-dark: rgba(0, 0, 0, 0.16);
+    --zl-screen-glow: rgba(210, 185, 102, 0.1);
+}
+
+// 3. Страховка для обычного текста (тегов <p>), если плагин ставит Schibsted Grotesk через инлайн-стили
+p, span, li, body, a.nav-file-title {
+  font-family: var(--bodyFont) !important;
+}
+
+h2.page-title {
+    font-size: 2rem;
+}
+
+[data-slug="index"] { 
+  h1.article-title {
+    display: none !important;
+  }
+}
+
+.callout[data-callout=info], .callout[data-callout=todo] {
+    --color: #c0aa62;
+    --border: #c0aa6244;
+    --bg: #c0aa6210;
+    --callout-icon: var(--callout-icon-info);
+}
+
+.search>.search-container>.search-space>input {
+    background-color: #15130c;
+    border-radius: 5px;
+}
+
+.search>.search-container{
+    backdrop-filter: unset;
+    background-color: #15130c;
+}
+
+/* Настройка всей полосы прокрутки */
+::-webkit-scrollbar {
+  width: 10px;               /* Ширина вертикального скроллбара */
+  height: 10px;              /* Высота горизонтального скроллбара */
+}
+
+/* Настройка дорожки, по которой двигается ползунок */
+::-webkit-scrollbar-track {
+  background: var(--light);  /* Использует фоновый цвет вашей темы */
+  border-radius: 5px;
+}
+
+/* Настройка самого ползунка (бегунка) */
+::-webkit-scrollbar-thumb {
+  background: var(--gray);   /* Цвет ползунка из переменных Quartz */
+  border-radius: 5px;        /* Округление углов */
+  border: 2px solid var(--light); /* Отступ вокруг ползунка */
+}
+
+/* Эффект при наведении на ползунок */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary); /* Изменение цвета при наведении */
+}

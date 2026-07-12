@@ -13,7 +13,7 @@ configuration:
     - templates
     - .obsidian
   theme:
-    fontOrigin: googleFonts
+    fontOrigin: local
     cdnCaching: true
     typography:
       header: Consolas
@@ -25,7 +25,7 @@ configuration:
         lightgray: "#e5e5e5"
         gray: "#b8b8b8"
         darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
+        dark: "#ffffff"
         secondary: "#284b63"
         tertiary: "#84a59d"
         highlight: rgba(143, 159, 169, 0.15)
@@ -77,12 +77,12 @@ plugins:
   - source: github:quartz-community/github-flavored-markdown
     enabled: true
     order: 40
-  - source: github:quartz-community/table-of-contents
-    enabled: true
-    order: 50
-    layout:
-      position: right
-      priority: 30
+  # - source: github:quartz-community/table-of-contents
+  #   enabled: true
+  #   order: 50
+  #   layout:
+  #     position: right
+  #     priority: 30
   - source: github:quartz-community/crawl-links
     enabled: true
     options:
@@ -91,25 +91,31 @@ plugins:
   - source: github:quartz-community/description
     enabled: true
     order: 70
-  - source: github:quartz-community/latex
-    enabled: true
-    options:
-      renderEngine: katex
-    order: 80
-  - source: github:quartz-community/citations
-    enabled: false
-    order: 85
+  # - source: github:quartz-community/latex
+  #   enabled: true
+  #   options:
+  #     renderEngine: katex
+  #   order: 80
+  # - source: github:quartz-community/citations
+  #   enabled: false
+  #   order: 85
   - source: github:quartz-community/hard-line-breaks
     enabled: true
     order: 90
-  - source: github:quartz-community/ox-hugo
-    enabled: false
-    order: 91
+  # - source: github:quartz-community/ox-hugo
+  #   enabled: false
+  #   order: 91
   - source: github:quartz-community/roam
     enabled: false
     order: 92
   - source: github:quartz-community/fonts
     enabled: true
+    options:
+      useThemeFonts: false      
+      fontOrigin: googleFonts   
+      header: Victor Mono    
+      body: Victor Mono
+      code: Victor Mono
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/explicit-publish
@@ -148,18 +154,20 @@ plugins:
     enabled: true
   - source: github:quartz-community/folder-page
     enabled: true
-  - source: github:quartz-community/tag-page
-    enabled: true
+  # - source: github:quartz-community/tag-page
+  #   enabled: true
   - source: github:quartz-community/explorer
     enabled: true
+    options:
+      title: Навигатор
     layout:
       position: left
       priority: 50
-  - source: github:quartz-community/graph
-    enabled: true
-    layout:
-      position: right
-      priority: 10
+  # - source: github:quartz-community/graph
+  #   enabled: true
+  #   layout:
+  #     position: right
+  #     priority: 10
   - source: github:quartz-community/search
     enabled: true
     layout:
@@ -168,21 +176,21 @@ plugins:
       group: toolbar
       groupOptions:
         grow: true
-  - source: github:quartz-community/backlinks
-    enabled: true
-    layout:
-      position: right
-      priority: 50
+  # - source: github:quartz-community/backlinks
+  #   enabled: true
+  #   layout:
+  #     position: right
+  #     priority: 50
   - source: github:quartz-community/article-title
     enabled: true
     layout:
       position: beforeBody
       priority: 10
-  - source: github:quartz-community/content-meta
-    enabled: true
-    layout:
-      position: beforeBody
-      priority: 20
+  # - source: github:quartz-community/content-meta
+  #   enabled: true
+  #   layout:
+  #     position: beforeBody
+  #     priority: 20
   - source: github:quartz-community/tag-list
     enabled: false
     layout:
@@ -193,40 +201,40 @@ plugins:
     layout:
       position: left
       priority: 10
-  - source: github:quartz-community/darkmode
-    enabled: true
-    layout:
-      position: left
-      priority: 30
-      group: toolbar
-  - source: github:quartz-community/reader-mode
-    enabled: true
-    layout:
-      position: left
-      priority: 35
-      group: toolbar
-  - source: github:quartz-community/breadcrumbs
-    enabled: true
-    layout:
-      position: beforeBody
-      priority: 5
-      condition: not-index
-  - source: github:quartz-community/comments
-    enabled: false
-    options:
-      provider: giscus
-      options: {}
-    layout:
-      position: afterBody
-      priority: 10
+  # - source: github:quartz-community/darkmode
+  #   enabled: true
+  #   layout:
+  #     position: left
+  #     priority: 30
+  #     group: toolbar
+  # - source: github:quartz-community/reader-mode
+  #   enabled: true
+  #   layout:
+  #     position: left
+  #     priority: 35
+  #     group: toolbar
+  # - source: github:quartz-community/breadcrumbs
+  #   enabled: true
+  #   layout:
+  #     position: beforeBody
+  #     priority: 5
+  #     condition: not-index
+  # - source: github:quartz-community/comments
+  #   enabled: false
+  #   options:
+  #     provider: giscus
+  #     options: {}
+  #   layout:
+  #     position: afterBody
+  #     priority: 10
   # - source: github:quartz-community/footer
   #   enabled: true
   #   options:
   #     links:
   #       GitHub: https://github.com/jackyzha0/quartz
   #       Discord Community: https://discord.gg/cRFFHYye7t
-  - source: github:quartz-community/recent-notes
-    enabled: false
+  # - source: github:quartz-community/recent-notes
+  #   enabled: false
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
@@ -246,7 +254,7 @@ plugins:
       includedProperties:
         - description
         - tags
-        - aliases
+        # - aliases
       excludedProperties: []
       hidePropertiesView: false
       delimiters: ---
@@ -266,7 +274,8 @@ plugins:
       subdir: plugin
     enabled: true
     options:
-      theme: toms-theme
+      theme: retro-larper
+      # theme: wy-console
   # - source: github:quartz-community/obsidian-plugin-excalidraw
   #   enabled: true
   #   options:
