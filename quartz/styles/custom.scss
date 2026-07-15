@@ -97,3 +97,16 @@ h2.page-title {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary); /* Изменение цвета при наведении */
 }
+img {
+  filter: drop-shadow(0px 0px 8px var(--zl-phosphor-muted));
+}
+
+body a.internal-link {
+  background-color: unset !important;
+}
+
+body a.internal-link::after {
+  content: "▪";
+  vertical-align: super; 
+  font-size: 0.8em; /* Уменьшаем размер, чтобы смотрелось аккуратно */
+}
